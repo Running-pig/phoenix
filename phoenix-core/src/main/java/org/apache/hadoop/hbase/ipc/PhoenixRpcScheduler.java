@@ -116,14 +116,44 @@ public class PhoenixRpcScheduler extends RpcScheduler {
     }
 
     @Override
-    public long getNumGeneralCallsDropped() {
-        return delegate.getNumGeneralCallsDropped();
+    public int getWriteQueueLength() {
+        return 0;
     }
 
     @Override
-    public long getNumLifoModeSwitches() {
-        return delegate.getNumLifoModeSwitches();
+    public int getReadQueueLength() {
+        return 0;
     }
+
+    @Override
+    public int getScanQueueLength() {
+        return 0;
+    }
+
+    @Override
+    public int getActiveWriteRpcHandlerCount() {
+        return 0;
+    }
+
+    @Override
+    public int getActiveReadRpcHandlerCount() {
+        return 0;
+    }
+
+    @Override
+    public int getActiveScanRpcHandlerCount() {
+        return 0;
+    }
+
+//    @Override
+//    public long getNumGeneralCallsDropped() {
+//        return delegate.getNumGeneralCallsDropped();
+//    }
+//
+//    @Override
+//    public long getNumLifoModeSwitches() {
+//        return delegate.getNumLifoModeSwitches();
+//    }
 
     @VisibleForTesting
     public void setIndexExecutorForTesting(RpcExecutor executor) {

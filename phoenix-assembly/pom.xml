@@ -102,29 +102,29 @@
       <groupId>org.apache.phoenix</groupId>
       <artifactId>phoenix-core</artifactId>
     </dependency>
-    <dependency>
-      <groupId>org.apache.phoenix</groupId>
-      <artifactId>phoenix-flume</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.phoenix</groupId>
-      <artifactId>phoenix-kafka</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.phoenix</groupId>
-      <artifactId>phoenix-pig</artifactId>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>org.apache.phoenix</groupId>-->
+      <!--<artifactId>phoenix-flume</artifactId>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.apache.phoenix</groupId>-->
+      <!--<artifactId>phoenix-kafka</artifactId>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.apache.phoenix</groupId>-->
+      <!--<artifactId>phoenix-pig</artifactId>-->
+    <!--</dependency>-->
     <dependency>
       <groupId>org.apache.phoenix</groupId>
       <artifactId>phoenix-spark</artifactId>
     </dependency>
-    <dependency>
-      <groupId>org.apache.phoenix</groupId>
-      <artifactId>phoenix-queryserver</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.phoenix</groupId>
-      <artifactId>phoenix-queryserver-client</artifactId>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>org.apache.phoenix</groupId>-->
+      <!--<artifactId>phoenix-queryserver</artifactId>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.apache.phoenix</groupId>-->
+      <!--<artifactId>phoenix-queryserver-client</artifactId>-->
+    <!--</dependency>-->
   </dependencies>
 </project>

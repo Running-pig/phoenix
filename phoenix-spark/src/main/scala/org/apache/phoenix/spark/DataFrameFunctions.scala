@@ -33,7 +33,7 @@ class DataFrameFunctions(data: DataFrame) extends Serializable {
 
     // Retrieve the schema field names and normalize to Phoenix, need to do this outside of mapPartitions
     val fieldArray = getFieldArray(skipNormalizingIdentifier, data)
-    
+
 
     // Create a configuration object to use for saving
     @transient val outConfig = ConfigurationUtil.getOutputConfiguration(tableName, fieldArray, zkUrl, tenantId, Some(conf))
@@ -57,7 +57,7 @@ class DataFrameFunctions(data: DataFrame) extends Serializable {
 
     // Save it
     phxRDD.saveAsNewAPIHadoopFile(
-      "",
+      s"/tmp/$tableName-${System.currentTimeMillis()}",
       classOf[NullWritable],
       classOf[PhoenixRecordWritable],
       classOf[PhoenixOutputFormat[PhoenixRecordWritable]],

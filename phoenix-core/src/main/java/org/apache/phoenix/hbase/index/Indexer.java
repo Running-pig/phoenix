@@ -545,10 +545,10 @@ public class Indexer extends BaseRegionObserver {
                   indexUpdatesItr.remove();
               }
           }
-          if (!localUpdates.isEmpty()) {
-              miniBatchOp.addOperationsFromCP(0,
-                  localUpdates.toArray(new Mutation[localUpdates.size()]));
-          }
+//          if (!localUpdates.isEmpty()) {
+//              miniBatchOp.addOperationsFromCP(0,
+//                  localUpdates.toArray(new Mutation[localUpdates.size()]));
+//          }
           if (!indexUpdates.isEmpty()) {
               context.indexUpdates = indexUpdates;
               // write index updates to WAL

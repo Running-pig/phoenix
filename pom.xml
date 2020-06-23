@@ -24,22 +24,45 @@
 
   <modules>
     <module>phoenix-core</module>
-    <module>phoenix-flume</module>
-    <module>phoenix-kafka</module>
-    <module>phoenix-pig</module>
-    <module>phoenix-queryserver-client</module>
-    <module>phoenix-queryserver</module>
+    <!--<module>phoenix-flume</module>-->
+    <!--<module>phoenix-kafka</module>-->
+    <!--<module>phoenix-pig</module>-->
+    <!--<module>phoenix-queryserver-client</module>-->
+    <!--<module>phoenix-queryserver</module>-->
     <module>phoenix-pherf</module>
     <module>phoenix-spark</module>
     <module>phoenix-hive</module>
     <module>phoenix-client</module>
     <module>phoenix-server</module>
     <module>phoenix-assembly</module>
-    <module>phoenix-tracing-webapp</module>
-    <module>phoenix-load-balancer</module>
+    <!--<module>phoenix-tracing-webapp</module>-->
+    <!--<module>phoenix-load-balancer</module>-->
   </modules>
 
   <repositories>
+    <repository>
+      <id>cdh.repo</id>
+      <url>https://repository.cloudera.com/artifactory/cloudera-repos</url>
+      <name>Cloudera Repositories</name>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>cdh.snapshots.repo</id>
+      <url>https://repository.cloudera.com/artifactory/libs-snapshot-local</url>
+      <name>Cloudera Snapshots Repository</name>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+    </repository>
+    <repository>
+      <id>cloudbees netty</id>
+      <url>http://repository-netty.forge.cloudbees.com/snapshot/</url>
+    </repository>
     <repository>
       <id>apache release</id>
       <url>https://repository.apache.org/content/repositories/releases/</url>
@@ -47,9 +70,12 @@
   </repositories>
 
   <parent>
-    <groupId>org.apache</groupId>
-    <artifactId>apache</artifactId>
-    <version>14</version>
+    <!--<groupId>org.apache</groupId>-->
+    <!--<artifactId>apache</artifactId>-->
+    <!--<version>14</version>-->
+    <groupId>com.cloudera.cdh</groupId>
+    <artifactId>cdh-root</artifactId>
+    <version>5.12.0</version>
   </parent>
 
   <scm>
@@ -66,15 +92,15 @@
     <top.dir>${project.basedir}</top.dir>
 
     <!-- Hadoop Versions -->
-    <hbase.version>1.3.1</hbase.version>
-    <hadoop-two.version>2.7.1</hadoop-two.version>
+    <hbase.version>${cdh.hbase.version}</hbase.version>
+    <hadoop-two.version>${cdh.hadoop.version}</hadoop-two.version>
 
     <!-- Dependency versions -->
     <commons-cli.version>1.2</commons-cli.version>
     <hive.version>1.2.1</hive.version>
-    <hadoop.version>2.7.1</hadoop.version>
+    <hadoop.version>${cdh.hadoop.version}</hadoop.version>
     <pig.version>0.13.0</pig.version>
-    <jackson.version>1.9.2</jackson.version>
+    <jackson.version>${cdh.jackson.version}</jackson.version>
     <antlr.version>3.5.2</antlr.version>
     <log4j.version>1.2.17</log4j.version>
     <slf4j.version>1.6.4</slf4j.version>
@@ -101,7 +127,7 @@
     <avatica.version>1.10.0</avatica.version>
     <jettyVersion>8.1.7.v20120910</jettyVersion>
     <tephra.version>0.13.0-incubating</tephra.version>
-    <spark.version>2.0.2</spark.version>
+    <spark.version>2.2.0</spark.version>
     <scala.version>2.11.8</scala.version>
     <scala.binary.version>2.11</scala.binary.version>
     <stream.version>2.9.5</stream.version>
